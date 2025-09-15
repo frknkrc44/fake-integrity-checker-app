@@ -40,7 +40,7 @@
                 android:id="@+id/flow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:constraint_referenced_ids="basic_integrity_icon,basic_integrity_text,device_integrity_icon,device_integrity_text,strong_integrity_icon,strong_integrity_text,virtual_integrity_icon,virtual_integrity_text"
+                app:constraint_referenced_ids="ultranegative_integrity_icon,ultranegative_integrity_text,negative_integrity_icon,negative_integrity_text,lowest_integrity_icon,lowest_integrity_text,basic_integrity_icon,basic_integrity_text,device_integrity_icon,device_integrity_text,strong_integrity_icon,strong_integrity_text,overpower_integrity_icon,overpower_integrity_text,god_integrity_icon,god_integrity_text,godpro_integrity_icon,godpro_integrity_text,godproultra_integrity_icon,godproultra_integrity_text,virtual_integrity_icon,virtual_integrity_text"
                 app:flow_horizontalGap="15dp"
                 app:flow_verticalGap="15dp"
                 app:flow_wrapMode="aligned"
@@ -50,6 +50,30 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/check_btn" />
+
+            <ImageView
+                android:id="@+id/ultranegative_integrity_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/status_unknown"
+                android:src="@drawable/ic_unknown" />
+
+            <ImageView
+                android:id="@+id/negative_integrity_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/status_unknown"
+                android:src="@drawable/ic_unknown" />
+
+            <ImageView
+                android:id="@+id/lowest_integrity_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/status_unknown"
+                android:src="@drawable/ic_unknown" />
 
             <ImageView
                 android:id="@+id/basic_integrity_icon"
@@ -76,6 +100,38 @@
                 android:src="@drawable/ic_unknown" />
 
             <ImageView
+                android:id="@+id/overpower_integrity_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/status_unknown"
+                android:src="@drawable/ic_unknown" />
+
+            <ImageView
+                android:id="@+id/god_integrity_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/status_unknown"
+                android:src="@drawable/ic_unknown" />
+
+            <ImageView
+                android:id="@+id/godpro_integrity_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/status_unknown"
+                android:src="@drawable/ic_unknown" />
+
+            <ImageView
+                android:id="@+id/godproultra_integrity_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/status_unknown"
+                android:src="@drawable/ic_unknown" />
+
+            <ImageView
                 android:id="@+id/virtual_integrity_icon"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
@@ -83,6 +139,47 @@
                 android:contentDescription="@string/status_unknown"
                 android:src="@drawable/ic_unknown" />
 
+            <TextView
+                android:id="@+id/ultranegative_integrity_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="MEETS_ULTRANEGATIVE_INTEGRITY"
+                android:textColor="?colorOnPrimary"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/negative_integrity_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="MEETS_NEGATIVE_INTEGRITY"
+                android:textColor="?colorOnPrimary"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/lowest_integrity_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="MEETS_LOWEST_INTEGRITY"
+                android:textColor="?colorOnPrimary"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/basic_integrity_text"
@@ -127,6 +224,62 @@
                 tools:ignore="HardcodedText" />
 
             <TextView
+                android:id="@+id/overpower_integrity_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="MEETS_OVERPOWER_INTEGRITY"
+                android:textColor="?colorOnPrimary"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/god_integrity_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="MEETS_GOD_INTEGRITY"
+                android:textColor="?colorOnPrimary"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/godpro_integrity_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="MEETS_GODPRO_INTEGRITY"
+                android:textColor="?colorOnPrimary"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/godproultra_integrity_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="MEETS_GODPROULTRA_INTEGRITY"
+                android:textColor="?colorOnPrimary"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
                 android:id="@+id/virtual_integrity_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -139,16 +292,6 @@
                 android:textColor="?colorOnPrimary"
                 android:textSize="18sp"
                 tools:ignore="HardcodedText" />
-
-
-            <androidx.constraintlayout.widget.Group
-                android:id="@+id/virtual_integrity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                app:constraint_referenced_ids="virtual_integrity_text,virtual_integrity_icon"
-                tools:visibility="visible" />
-
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/check_btn"

@@ -37,15 +37,19 @@ import gr.nikolasspyr.integritycheck.dialogs.AboutDialog;
 public class MainActivity extends AppCompatActivity {
 
     private MaterialButton btn;
+    private ImageView ultraNegativeIntegrityIcon;
+    private ImageView negativeIntegrityIcon;
+    private ImageView lowestIntegrityIcon;
     private ImageView deviceIntegrityIcon;
     private ImageView basicIntegrityIcon;
     private ImageView strongIntegrityIcon;
+    private ImageView overpowerIntegrityIcon;
+    private ImageView godIntegrityIcon;
+    private ImageView godProIntegrityIcon;
+    private ImageView godProUltraIntegrityIcon;
     private ImageView virtualIntegrityIcon;
 
-    private Group virtualIntegrity;
-
     private String jsonResponse;
-    private Integer[] integrityState = {-1, -1, -1, -1};
 
     private final Executor executor = Executors.newSingleThreadExecutor();
 
@@ -74,19 +78,23 @@ public class MainActivity extends AppCompatActivity {
 
         btn = findViewById(R.id.check_btn);
 
+        ultraNegativeIntegrityIcon = findViewById(R.id.ultranegative_integrity_icon);
+        negativeIntegrityIcon = findViewById(R.id.negative_integrity_icon);
+        lowestIntegrityIcon = findViewById(R.id.lowest_integrity_icon);
         basicIntegrityIcon = findViewById(R.id.basic_integrity_icon);
         deviceIntegrityIcon = findViewById(R.id.device_integrity_icon);
         strongIntegrityIcon = findViewById(R.id.strong_integrity_icon);
+        overpowerIntegrityIcon = findViewById(R.id.overpower_integrity_icon);
+        godIntegrityIcon = findViewById(R.id.god_integrity_icon);
+        godProIntegrityIcon = findViewById(R.id.godpro_integrity_icon);
+        godProUltraIntegrityIcon = findViewById(R.id.godproultra_integrity_icon);
         virtualIntegrityIcon = findViewById(R.id.virtual_integrity_icon);
-
-        virtualIntegrity = findViewById(R.id.virtual_integrity);
 
         btn.setOnClickListener(view -> {
             toggleButtonLoading(true);
 
             jsonResponse = null;
-            integrityState = new Integer[]{-1, -1, -1, -1};
-            setIcons(integrityState);
+            setIcons(-1);
 
             executor.execute(() -> {
                 try {
@@ -97,11 +105,7 @@ public class MainActivity extends AppCompatActivity {
                     toggleButtonLoading(false);
                     jsonResponse = "{\"fakeResponse\": true}";
 
-                    for (int i = 0; i < integrityState.length - 1; i++) {
-                        integrityState[i] = 1;
-                    }
-
-                    setIcons(integrityState);
+                    setIcons(1);
                 });
             });
         });
@@ -140,17 +144,18 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void setIcons(Integer[] integrityState) {
-        setIcon(basicIntegrityIcon, integrityState[0]);
-        setIcon(deviceIntegrityIcon, integrityState[1]);
-        setIcon(strongIntegrityIcon, integrityState[2]);
-        setIcon(virtualIntegrityIcon, integrityState[3]);
-
-        if (integrityState[3] != -1) {
-            virtualIntegrity.setVisibility(View.VISIBLE);
-        } else {
-            virtualIntegrity.setVisibility(View.GONE);
-        }
+    private void setIcons(int integrityState) {
+        setIcon(ultraNegativeIntegrityIcon, integrityState);
+        setIcon(negativeIntegrityIcon, integrityState);
+        setIcon(lowestIntegrityIcon, integrityState);
+        setIcon(basicIntegrityIcon, integrityState);
+        setIcon(deviceIntegrityIcon, integrityState);
+        setIcon(strongIntegrityIcon, integrityState);
+        setIcon(overpowerIntegrityIcon, integrityState);
+        setIcon(godIntegrityIcon, integrityState);
+        setIcon(godProIntegrityIcon, integrityState);
+        setIcon(godProUltraIntegrityIcon, integrityState);
+        setIcon(virtualIntegrityIcon, integrityState);
     }
 
     private void setIcon(ImageView img, int state) {
